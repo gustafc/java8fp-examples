@@ -8,7 +8,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static java8fp.Comparisons.compareAlphaNumeric;
+import static java8fp.Comparisons.compareAlphanumeric;
 import static java8fp.Comparisons.EQUALS;
 import static java8fp.Comparisons.LESS_THAN;
 import static java8fp.Comparisons.GREATER_THAN;
@@ -45,7 +45,7 @@ public class ComparisonsTest {
 
     @Test
     public void testOutcome() {
-        assertEquals(expectedOutcome, compareAlphaNumeric(a, b));
+        assertEquals(expectedOutcome, compareAlphanumeric(a, b));
     }
 
 

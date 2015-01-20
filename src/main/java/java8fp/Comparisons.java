@@ -15,7 +15,7 @@ public class Comparisons {
         }
     }
 
-    public static int compareAlphaNumeric(String a, String b) {
+    public static int compareAlphanumeric(String a, String b) {
         Optional<BigDecimal> x = parse(a), y = parse(b);
         return x.map(xv ->
                     y.map(yv -> xv.compareTo(yv)).orElse(LESS_THAN))
