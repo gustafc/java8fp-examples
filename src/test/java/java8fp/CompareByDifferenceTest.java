@@ -35,8 +35,13 @@ public class CompareByDifferenceTest {
     }
 
     @Test
-    public void testOutcome() {
+    public void testLambdaBased() {
         assertEquals(expectedOutcome, compareByDifferenceTo(5).compare(a, b));
+    }
+
+    @Test
+    public void testClassBased() {
+        assertEquals(expectedOutcome, new DifferenceComparator(5).compare(a, b));
     }
 
 

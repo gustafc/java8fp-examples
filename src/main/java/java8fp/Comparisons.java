@@ -30,4 +30,15 @@ public class Comparisons {
                                 .compareTo(Math.abs(n - b));
     }
 
+    public static class DifferenceComparator implements Comparator<Integer> {
+        private final int n;
+        public DifferenceComparator(int n) {
+            this.n = n;
+        }
+        @Override
+        public int compare(Integer a, Integer b) {
+            return Integer.valueOf(Math.abs(n - a)).compareTo(Math.abs(n - b));
+        }
+    }
+
 }
