@@ -15,7 +15,7 @@ import static java8fp.Comparisons.GREATER_THAN;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ComparisonsTest {
+public class CompareAlphanumericTest {
 
     @Parameters(name = "{0} cmp= {2} == {1}")
     public static Collection<Object[]> data() {
@@ -37,7 +37,7 @@ public class ComparisonsTest {
     private final String a, b;
     private final int expectedOutcome;
 
-    public ComparisonsTest(String a, int expectedOutcome, String b) {
+    public CompareAlphanumericTest(String a, int expectedOutcome, String b) {
         this.a = a;
         this.b = b;
         this.expectedOutcome = expectedOutcome;

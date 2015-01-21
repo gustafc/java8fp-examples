@@ -1,6 +1,7 @@
 package java8fp;
 
 import java.math.BigDecimal;
+import java.util.Comparator;
 import java.util.Optional;
 
 public class Comparisons {
@@ -23,4 +24,10 @@ public class Comparisons {
                         y.map(yv -> GREATER_THAN).orElseGet(() ->
                                 a.compareTo(b)));
     }
+
+    public static Comparator<Integer> compareByDifferenceTo(int n) {
+        return (a, b) -> Integer.valueOf(Math.abs(n - a))
+                                .compareTo(Math.abs(n - b));
+    }
+
 }
