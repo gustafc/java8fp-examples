@@ -19,7 +19,7 @@ public class Comparisons {
     public static int compareAlphanumeric(String a, String b) {
         Optional<BigDecimal> x = parse(a), y = parse(b);
         return x.map(xv ->
-                    y.map(yv -> xv.compareTo(yv)).orElse(LESS_THAN))
+                    y.map(xv::compareTo).orElse(LESS_THAN))
                 .orElseGet(() ->
                         y.map(yv -> GREATER_THAN).orElseGet(() ->
                                 a.compareTo(b)));
