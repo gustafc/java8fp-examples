@@ -21,3 +21,11 @@ public class SpecialCases {
     }
 
 }
+
+class Foo {
+
+    public Supplier<Foo> makeSupplier() {
+        return () -> this;
+    }
+
+}
